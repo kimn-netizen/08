@@ -1,18 +1,19 @@
 #include <stdio.h>
+#include <stdlib.h>
 #define SIZE 5
+
 int main(void)
 {
-int i, average;
-int sum;
-int grade[SIZE];
-sum = 0;
-for(i=0; i<SIZE; i++)
-{
-printf("input grade : ");
-scanf("%d", &grade[i]);
-sum += grade[i];
-}
-average = sum / SIZE;
-printf("average : %d\n", average);
+    int i;
+    int grade[SIZE];
+    int score[SIZE];
+    
+    for (i=0; i<SIZE; i++)
+    {
+        grade[i] = rand() % 100;
+        score[i] = grade[i];
+    }
+    for( i=0; i<SIZE; i++)
+    printf("score[%d] = %d\n", i, score[i]);
 return 0;
 }
