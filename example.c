@@ -1,19 +1,17 @@
 #include <stdio.h>
-#include <stdlib.h>
 #define SIZE 5
 
 int main(void)
 {
     int i;
-    int grade[SIZE];
-    int score[SIZE];
-    
-    for (i=0; i<SIZE; i++)
+    int a[SIZE] = {1, 2, 9, 4, 5};
+    int b[SIZE] = {1, 2, 3, 4, 5};
+
+    for (i = 0; i < SIZE; i++)
     {
-        grade[i] = rand() % 100;
-        score[i] = grade[i];
+        if (a[i] != b[i])
+            printf("index%d different\n", i);
     }
-    for( i=0; i<SIZE; i++)
-    printf("score[%d] = %d\n", i, score[i]);
-return 0;
+
+    return 0;
 }
